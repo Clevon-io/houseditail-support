@@ -34,6 +34,6 @@
 
 ```bash
 pnpm install      # 또는 npm install
-pnpm dev          # http://localhost:3100
+pnpm dev          # http://localhost:3000
 pnpm build
 ```
