@@ -6,7 +6,7 @@ export type LegalSection = {
 };
 
 export type LegalDoc = {
-  slug: "terms" | "privacy";
+  slug: "terms" | "privacy" | "works-privacy";
   overline: string;
   title: string;
   subtitle?: string;
@@ -25,6 +25,12 @@ export type FaqItem = {
   question: string;
   answer: string;
   popular?: boolean;
+};
+
+export type WorksFaqItem = {
+  id: string;
+  question: string;
+  answer: string;
 };
 
 export type InquiryType = {

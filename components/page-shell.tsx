@@ -29,7 +29,7 @@ export function PageShell({
               <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-zinc-500">
                 {overline}
               </p>
-              <h1 className="mt-4 font-serif text-[42px] leading-[1.02] tracking-[-0.015em] text-zinc-950 md:text-[68px]">
+              <h1 className="mt-4 break-keep font-serif text-[42px] leading-[1.02] tracking-[-0.015em] text-zinc-950 md:text-[68px]">
                 {title}
                 {subtitle ? (
                   <span className="ml-4 align-[0.18em] font-serif italic text-zinc-400 md:text-[40px]">

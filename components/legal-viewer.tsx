@@ -5,7 +5,17 @@ import Link from "next/link";
 import { SITE } from "@/lib/site";
 import type { LegalDoc } from "@/content/types";
 
-export function LegalViewer({ doc }: { doc: LegalDoc }) {
+type Props = {
+  doc: LegalDoc;
+  contactHref?: string;
+  contactLabel?: string;
+};
+
+export function LegalViewer({
+  doc,
+  contactHref = "/inquiry",
+  contactLabel = "1:1 문의",
+}: Props) {
   const [active, setActive] = useState(doc.sections[0]?.id ?? "");
 
   useEffect(() => {
@@ -120,10 +130,10 @@ export function LegalViewer({ doc }: { doc: LegalDoc }) {
           <p className="mt-2 max-w-[60ch] text-[13px] leading-relaxed text-zinc-500">
             문서에 대한 궁금한 점이 있다면{" "}
             <Link
-              href="/inquiry"
+              href={contactHref}
               className="text-zinc-900 underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-900"
             >
-              1:1 문의
+              {contactLabel}
             </Link>{" "}
             또는 {SITE.supportEmail} 로 남겨 주세요.
           </p>
