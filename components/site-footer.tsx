@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { worksNav } from "@/content/works";
 import { SITE } from "@/lib/site";
 
 const footerNav: Array<{ title: string; links: Array<{ label: string; href: string }> }> = [
@@ -17,13 +18,17 @@ const footerNav: Array<{ title: string; links: Array<{ label: string; href: stri
       { label: "개인정보 처리방침", href: "/privacy" },
     ],
   },
+  {
+    title: "Works App",
+    links: worksNav.map((item) => ({ label: item.label, href: item.href })),
+  },
 ];
 
 export function SiteFooter() {
   return (
     <footer className="bg-zinc-950 text-[#FAFAF7]">
       <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-8 md:py-20">
-        <div className="grid grid-cols-2 gap-10 border-b border-[#FAFAF7]/10 pb-12 md:grid-cols-3 md:gap-8">
+        <div className="grid grid-cols-2 gap-10 border-b border-[#FAFAF7]/10 pb-12 md:grid-cols-4 md:gap-8">
           {footerNav.map((col) => (
             <div key={col.title}>
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FAFAF7]/55">

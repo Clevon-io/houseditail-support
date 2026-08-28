@@ -14,6 +14,9 @@
 | `/terms` | 서비스 이용약관 |
 | `/privacy` | 개인정보 처리방침 |
 | `/inquiry` | 1:1 문의 (메일 클라이언트 연동) |
+| `/apps/works/support` | **App Store 지원 URL용** 웍스(직원용) 앱 지원 페이지 |
+| `/apps/works/privacy` | 웍스 앱 개인정보 처리방침 |
+| `/apps/works/account-deletion` | **Google Play 등록정보용** 웍스 앱 계정 삭제 안내 |
 
 ## Google Play 요건 충족 — `/account-deletion`
 
@@ -22,6 +25,12 @@
 - **삭제 / 보관 데이터 + 추가 보관 기간** : 항목별 표 (법령 근거 포함)
 
 이 URL을 Google Play Console 데이터 보안 → 계정 삭제 URL에 등록한다.
+
+## 웍스(직원용) 앱 — `/apps/works/*`
+
+케어 앱과 같은 레이아웃으로 만든 직원용 앱 공개 페이지. 콘텐츠는 `content/works.ts`
+한 곳에 있다(앱 이름·보관 기간·FAQ·삭제 절차). 직원 계정은 회사가 관리하므로
+계정 삭제는 "인사 담당자에게 퇴사 처리 요청"으로 안내하고 앱 내 셀프 삭제는 두지 않는다.
 
 ## 운영 값 설정
 
